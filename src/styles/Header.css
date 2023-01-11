@@ -1,0 +1,26 @@
+header {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.githublink {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 25px;
+}
+
+.githublink:hover {
+  animation: rotate-animation 0.5s ease-out;
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
