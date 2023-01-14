@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import '../styles/Main.css';
 import Personel from './form-components/Personel';
+import Experience from './form-components/Experince';
 import Overview from './Overview';
 
 export default class Main extends Component {
@@ -42,7 +43,7 @@ export default class Main extends Component {
   }
 
   // handleChange methods
-  handlePersonelInfoChange = (event) => {
+  handleChangePersonelInfo = (event) => {
     const { name, value } = event.target;
 
     this.setState((prevState) => ({
@@ -59,8 +60,9 @@ export default class Main extends Component {
         <div className="input-area">
           <Personel
             personelInfo={this.state.personelInfo}
-            handleChange={this.handlePersonelInfoChange}
+            handleChange={this.handleChangePersonelInfo}
           />
+          <Experience experience={this.state.experience} />
         </div>
         <div className="overview-area">
           <Overview inputs={this.state} />
