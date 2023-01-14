@@ -54,6 +54,18 @@ export default class Main extends Component {
     }));
   };
 
+  handleChangeExperience = (event) => {
+    const { name, value } = event.target;
+    this.setState((prevState) => ({
+      experience: prevState.experience.map((exp) => {
+        if (exp.id === event.target.id) {
+          return { ...exp, [name]: value };
+        }
+        return exp;
+      }),
+    }));
+  };
+
   render() {
     return (
       <main>
