@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
-import UserInput from './UserInput';
+import Personel from './form-components/Personel';
+import Overview from './Overview';
 
 export default class Main extends Component {
   constructor(props) {
@@ -39,10 +40,25 @@ export default class Main extends Component {
     };
   }
 
+  handlePersonelInfoChange = (event) => {
+    const { name, value } = event.target;
+
+    this.setState((prevState) => ({
+      personelInfo: {
+        ...prevState.personelInfo,
+        [name]: value,
+      },
+    }));
+  };
+
   render() {
     return (
       <main>
-        <UserInput inputs={this.state} />
+        <Personel
+          personelInfo={this.state.personelInfo}
+          handleChange={this.handlePersonelInfoChange}
+        />
+        <Overview inputs={this.state} />
       </main>
     );
   }

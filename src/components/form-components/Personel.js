@@ -3,25 +3,24 @@ import React, { Component } from 'react';
 export default class Personel extends Component {
   constructor(props) {
     super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange = (e) => {
-    const { name } = e.target;
-
-    this.setState({
+    this.state = {
       personelInfo: {
-        [name]: e.target.value,
+        firstName: props.personelInfo.firstName,
+        lastName: props.personelInfo.lastName,
+        title: props.personelInfo.title,
+        address: props.personelInfo.address,
+        phoneNumber: props.personelInfo.phoneNumber,
+        email: props.personelInfo.email,
+        description: props.personelInfo.description,
       },
-    });
-  };
+    };
+  }
 
   render() {
     return (
       <section title="Personel Information" direction="column">
         <input
-          onChange={this.handleChange}
+          onChange={this.props.handleChange}
           type="text"
           id="firstName"
           name="firstName"
@@ -30,6 +29,7 @@ export default class Personel extends Component {
         />
 
         <input
+          onChange={this.props.handleChange}
           type="text"
           id="lastName"
           name="lastName"
@@ -38,6 +38,7 @@ export default class Personel extends Component {
         />
 
         <input
+          onChange={this.props.handleChange}
           type="text"
           id="title"
           name="title"
@@ -46,6 +47,7 @@ export default class Personel extends Component {
         />
 
         <input
+          onChange={this.props.handleChange}
           type="text"
           id="address"
           name="address"
@@ -54,6 +56,7 @@ export default class Personel extends Component {
         />
 
         <input
+          onChange={this.props.handleChange}
           type="text"
           id="phoneNumber"
           name="phoneNumber"
@@ -62,6 +65,7 @@ export default class Personel extends Component {
         />
 
         <input
+          onChange={this.props.handleChange}
           type="email"
           id="email"
           name="email"
@@ -70,6 +74,7 @@ export default class Personel extends Component {
         />
 
         <textarea
+          onChange={this.props.handleChange}
           type="text"
           id="description"
           name="description"
