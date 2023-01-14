@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../styles/InputArea.css';
 
 export default class Personel extends Component {
   constructor(props) {
@@ -18,7 +19,11 @@ export default class Personel extends Component {
 
   render() {
     return (
-      <section title="Personel Information" direction="column">
+      <section
+        title="Personel Information"
+        direction="column"
+        className="input-section personel-info-container"
+      >
         <input
           onChange={this.props.handleChange}
           type="text"

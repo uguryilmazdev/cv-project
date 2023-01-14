@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
+import '../styles/Main.css';
 import Personel from './form-components/Personel';
 import Overview from './Overview';
 
@@ -40,6 +41,7 @@ export default class Main extends Component {
     };
   }
 
+  // handleChange methods
   handlePersonelInfoChange = (event) => {
     const { name, value } = event.target;
 
@@ -54,11 +56,15 @@ export default class Main extends Component {
   render() {
     return (
       <main>
-        <Personel
-          personelInfo={this.state.personelInfo}
-          handleChange={this.handlePersonelInfoChange}
-        />
-        <Overview inputs={this.state} />
+        <div className="input-area">
+          <Personel
+            personelInfo={this.state.personelInfo}
+            handleChange={this.handlePersonelInfoChange}
+          />
+        </div>
+        <div className="overview-area">
+          <Overview inputs={this.state} />
+        </div>
       </main>
     );
   }
