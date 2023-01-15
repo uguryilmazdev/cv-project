@@ -19,26 +19,24 @@ export default class Main extends Component {
         email: '',
         description: '',
       },
-      experience: [
-        {
-          id: uniqid(),
-          position: '',
-          company: '',
-          city: '',
-          dateFrom: '',
-          dataTo: '',
-        },
-      ],
-      education: [
-        {
-          id: uniqid(),
-          schoolName: '',
-          city: '',
-          degree: '',
-          dateFrom: '',
-          dataTo: '',
-        },
-      ],
+      experience: {
+        id: uniqid(),
+        position: '',
+        company: '',
+        city: '',
+        dateFrom: '',
+        dataTo: '',
+      },
+      education: {
+        id: uniqid(),
+        schoolName: '',
+        city: '',
+        degree: '',
+        dateFrom: '',
+        dataTo: '',
+      },
+      experienceArr: [],
+      educationArr: [],
     };
   }
 
@@ -57,13 +55,28 @@ export default class Main extends Component {
   handleChangeExperience = (event) => {
     const { name, value } = event.target;
     this.setState((prevState) => ({
-      experience: prevState.experience.map((exp) => {
-        if (exp.id === event.target.id) {
-          return { ...exp, [name]: value };
-        }
-        return exp;
-      }),
+      experience: {
+        ...prevState.experience,
+        [name]: value,
+      },
     }));
+  };
+
+  // submit method
+  onSubmitExperience = (event) => {
+    event.preventDefault();
+    this.setState({
+      experienceArr: this.state.experienceArr.concat(this.state.experience),
+      experience: {
+        id: uniqid(),
+        position: '',
+        company: '',
+        city: '',
+        dateFrom: '',
+        dataTo: '',
+      },
+    });
+    console.log(this.state.experienceArr);
   };
 
   render() {
@@ -74,10 +87,15 @@ export default class Main extends Component {
             personelInfo={this.state.personelInfo}
             handleChange={this.handleChangePersonelInfo}
           />
-          <Experience experience={this.state.experience} />
+          <Experience
+            experience={this.state.experience}
+            experienceArr={this.state.experienceArr}
+            handleChange={this.handleChangeExperience}
+            handleSubmit={this.onSubmitExperience}
+          />
         </div>
         <div className="overview-area">
-          <Overview inputs={this.state} />
+          <Overview experienceArr={this.state.experienceArr} />
         </div>
       </main>
     );
