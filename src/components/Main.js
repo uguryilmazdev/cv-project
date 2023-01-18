@@ -3,6 +3,7 @@ import uniqid from 'uniqid';
 import '../styles/Main.css';
 import Personel from './form-components/Personel';
 import Experience from './form-components/Experince';
+import Education from './form-components/Education';
 import Overview from './Overview';
 
 export default class Main extends Component {
@@ -80,6 +81,7 @@ export default class Main extends Component {
             handleChange={this.handleChangeExperience}
             handleSubmit={this.onSubmitExperience}
           />
+          <Education />
         </div>
         <div className="overview-area">
           <Overview list={this.state.experienceList} />
