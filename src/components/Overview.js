@@ -6,7 +6,7 @@ export default class Overview extends Component {
     return (
       <div>
         {this.props.list.map((exp) => {
-          return <div key={exp.id}>{exp.dateFrom}</div>;
+          return <div key={exp.id}>{exp.position}</div>;
         })}
       </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uniqid from 'uniqid';
 
 export default class Experience extends Component {
   constructor(props) {
@@ -7,16 +6,22 @@ export default class Experience extends Component {
 
     this.state = {
       experience: {
-        id: uniqid(),
-        position: '',
-        company: '',
-        city: '',
-        dateFrom: '',
-        dataTo: '',
+        id: props.experience.id,
+        position: props.experience.position,
+        company: props.experience.company,
+        city: props.experience.city,
+        dateFromExp: props.experience.dateFromExp,
+        dateToExp: props.experience.dateToExp,
       },
 
       experienceList: props.list,
     };
+  }
+
+  componentDidUpdate(props) {
+    if (props.experience !== this.props.experience) {
+      this.setState(props);
+    }
   }
 
   render() {

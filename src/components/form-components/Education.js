@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uniqid from 'uniqid';
 
 export default class Education extends Component {
   constructor(props) {
@@ -7,21 +6,27 @@ export default class Education extends Component {
 
     this.state = {
       education: {
-        id: uniqid(),
-        schoolName: '',
-        city: '',
-        degree: '',
-        dateFrom: '',
-        dataTo: '',
+        id: props.education.id,
+        schoolName: props.education.schoolName,
+        city: props.education.city,
+        degree: props.education.degree,
+        dateFromEdu: props.education.dateFromEdu,
+        dateToEdu: props.education.dateToEdu,
       },
 
       educationList: props.list,
     };
   }
 
+  componentDidUpdate(props) {
+    if (props.education !== this.props.education) {
+      this.setState(props);
+    }
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.props.handleSubmit}>
         <section
           title="Education Information"
           direction="column"
@@ -68,6 +73,7 @@ export default class Education extends Component {
             placeholder="to"
             autoComplete="off"
           />
+          <button type="submit">Add</button>
         </section>
       </form>
     );

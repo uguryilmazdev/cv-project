@@ -17,6 +17,12 @@ export default class Personel extends Component {
     };
   }
 
+  componentDidUpdate(props) {
+    if (props.personelInfo !== this.props.personelInfo) {
+      this.setState(props);
+    }
+  }
+
   render() {
     return (
       <section
@@ -31,6 +37,7 @@ export default class Personel extends Component {
           name="firstName"
           placeholder="first name"
           autoComplete="off"
+          value={this.props.personelInfo.firstName}
         />
 
         <input

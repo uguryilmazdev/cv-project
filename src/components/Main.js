@@ -20,6 +20,22 @@ export default class Main extends Component {
         email: '',
         description: '',
       },
+      experience: {
+        id: uniqid(),
+        position: '',
+        company: '',
+        city: '',
+        dateFromExp: '',
+        dateToExp: '',
+      },
+      education: {
+        id: uniqid(),
+        schoolName: '',
+        city: '',
+        degree: '',
+        dateFromEdu: '',
+        dateToEdu: '',
+      },
 
       experienceList: [],
       educationList: [],
@@ -28,27 +44,33 @@ export default class Main extends Component {
 
   // handleChange methods
   handleChangePersonelInfo = (event) => {
-    this.setState({
+    const { name, value } = event.target;
+    this.setState((prevState) => ({
       personelInfo: {
-        [event.target.name]: event.target.value,
+        ...prevState.personelInfo,
+        [name]: value,
       },
-    });
+    }));
   };
 
   handleChangeExperience = (event) => {
-    this.setState({
+    const { name, value } = event.target;
+    this.setState((prevState) => ({
       experience: {
-        [event.target.name]: event.target.value,
+        ...prevState.experience,
+        [name]: value,
       },
-    });
+    }));
   };
 
   handleChangeEducation = (event) => {
-    this.setState({
+    const { name, value } = event.target;
+    this.setState((prevState) => ({
       education: {
-        [event.target.name]: event.target.value,
+        ...prevState.education,
+        [name]: value,
       },
-    });
+    }));
   };
 
   // submit method
@@ -57,12 +79,27 @@ export default class Main extends Component {
     this.setState({
       experienceList: this.state.experienceList.concat(this.state.experience),
       experience: {
-        id: uniqid(),
-        position: '',
-        company: '',
-        city: '',
-        dateFrom: '',
-        dataTo: '',
+        id: this.state.experience.id,
+        position: this.state.experience.position,
+        company: this.state.experience.company,
+        city: this.state.experience.city,
+        dateFromExp: this.state.experience.dateFromExp,
+        dateToExp: this.state.experience.dateToExp,
+      },
+    });
+  };
+
+  onSubmitEducation = (event) => {
+    event.preventDefault();
+    this.setState({
+      educationList: this.state.educationList.concat(this.state.education),
+      education: {
+        id: this.state.education.id,
+        schoolName: this.state.education.schoolName,
+        city: this.state.education.city,
+        degree: this.state.education.degree,
+        dateFromEdu: this.state.education.dateFromEdu,
+        dateToEdu: this.state.education.dateToEdu,
       },
     });
   };
@@ -76,13 +113,16 @@ export default class Main extends Component {
             handleChange={this.handleChangePersonelInfo}
           />
           <Experience
+            experience={this.state.experience}
             list={this.state.experienceList}
             handleChange={this.handleChangeExperience}
             handleSubmit={this.onSubmitExperience}
           />
           <Education
+            education={this.state.education}
             list={this.state.educationList}
             handleChange={this.handleChangeEducation}
+            handleSubmit={this.onSubmitEducation}
           />
         </div>
         <div className="overview-area">
