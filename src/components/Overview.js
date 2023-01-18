@@ -8,6 +8,7 @@ export default class Overview extends Component {
         {this.props.list.map((exp) => {
           return <div key={exp.id}>{exp.position}</div>;
         })}
+        <div>{this.props.personelInfo.firstName}</div>
       </div>
     );
   }

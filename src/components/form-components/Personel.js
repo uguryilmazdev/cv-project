@@ -38,8 +38,8 @@ export default class Personel extends Component {
           name="firstName"
           placeholder="first name"
           autoComplete="off"
-          value={this.props.personelInfo.firstName}
           className="input-text"
+          value={this.props.personelInfo.firstName}
         />
 
         <input
@@ -50,6 +50,7 @@ export default class Personel extends Component {
           placeholder="last name"
           autoComplete="off"
           className="input-text"
+          value={this.props.personelInfo.lastName}
         />
 
         <input
@@ -60,6 +61,7 @@ export default class Personel extends Component {
           placeholder="title"
           autoComplete="off"
           className="input-text"
+          value={this.props.personelInfo.title}
         />
 
         <input
@@ -70,6 +72,7 @@ export default class Personel extends Component {
           placeholder="address"
           autoComplete="off"
           className="input-text"
+          value={this.props.personelInfo.address}
         />
 
         <input
@@ -80,6 +83,7 @@ export default class Personel extends Component {
           placeholder="phone number"
           autoComplete="off"
           className="input-text"
+          value={this.props.personelInfo.phoneNumber}
         />
 
         <input
@@ -90,6 +94,7 @@ export default class Personel extends Component {
           placeholder="e-mail"
           autoComplete="off"
           className="input-text"
+          value={this.props.personelInfo.email}
         />
 
         <textarea
@@ -100,6 +105,7 @@ export default class Personel extends Component {
           placeholder="description"
           autoComplete="off"
           className="input-text"
+          value={this.props.personelInfo.description}
         />
       </section>
     );
