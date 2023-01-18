@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uniqid from 'uniqid';
 
 export default class Experience extends Component {
   constructor(props) {
@@ -6,19 +7,18 @@ export default class Experience extends Component {
 
     this.state = {
       experience: {
-        id: props.experience.id,
-        position: props.experience.position,
-        company: props.experience.company,
-        city: props.experience.city,
-        dateFrom: props.experience.dateFrom,
-        dataTo: props.experience.dateTo,
+        id: uniqid(),
+        position: '',
+        company: '',
+        city: '',
+        dateFrom: '',
+        dataTo: '',
       },
 
-      experienceArr: props.experienceArr,
+      experienceList: props.list,
     };
   }
 
-  // submit button ekle
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
@@ -30,7 +30,6 @@ export default class Experience extends Component {
           <h2>Experience</h2>
           <input
             onChange={this.props.handleChange}
-            value={this.state.position}
             type="text"
             id="position"
             name="position"

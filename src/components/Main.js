@@ -19,14 +19,6 @@ export default class Main extends Component {
         email: '',
         description: '',
       },
-      experience: {
-        id: uniqid(),
-        position: '',
-        company: '',
-        city: '',
-        dateFrom: '',
-        dataTo: '',
-      },
       education: {
         id: uniqid(),
         schoolName: '',
@@ -35,38 +27,33 @@ export default class Main extends Component {
         dateFrom: '',
         dataTo: '',
       },
-      experienceArr: [],
+      experienceList: [],
       educationArr: [],
     };
   }
 
   // handleChange methods
   handleChangePersonelInfo = (event) => {
-    const { name, value } = event.target;
-
-    this.setState((prevState) => ({
+    this.setState({
       personelInfo: {
-        ...prevState.personelInfo,
-        [name]: value,
+        [event.target.name]: event.target.value,
       },
-    }));
+    });
   };
 
   handleChangeExperience = (event) => {
-    const { name, value } = event.target;
-    this.setState((prevState) => ({
+    this.setState({
       experience: {
-        ...prevState.experience,
-        [name]: value,
+        [event.target.name]: event.target.value,
       },
-    }));
+    });
   };
 
   // submit method
   onSubmitExperience = (event) => {
     event.preventDefault();
     this.setState({
-      experienceArr: this.state.experienceArr.concat(this.state.experience),
+      experienceList: this.state.experienceList.concat(this.state.experience),
       experience: {
         id: uniqid(),
         position: '',
@@ -76,7 +63,8 @@ export default class Main extends Component {
         dataTo: '',
       },
     });
-    console.log(this.state.experienceArr);
+
+    console.log(this.state.experienceList);
   };
 
   render() {
@@ -88,14 +76,13 @@ export default class Main extends Component {
             handleChange={this.handleChangePersonelInfo}
           />
           <Experience
-            experience={this.state.experience}
-            experienceArr={this.state.experienceArr}
+            list={this.state.experienceList}
             handleChange={this.handleChangeExperience}
             handleSubmit={this.onSubmitExperience}
           />
         </div>
         <div className="overview-area">
-          <Overview experienceArr={this.state.experienceArr} />
+          <Overview list={this.state.experienceList} />
         </div>
       </main>
     );
