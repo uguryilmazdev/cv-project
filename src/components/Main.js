@@ -20,16 +20,9 @@ export default class Main extends Component {
         email: '',
         description: '',
       },
-      education: {
-        id: uniqid(),
-        schoolName: '',
-        city: '',
-        degree: '',
-        dateFrom: '',
-        dataTo: '',
-      },
+
       experienceList: [],
-      educationArr: [],
+      educationList: [],
     };
   }
 
@@ -64,8 +57,6 @@ export default class Main extends Component {
         dataTo: '',
       },
     });
-
-    console.log(this.state.experienceList);
   };
 
   render() {
@@ -81,7 +72,7 @@ export default class Main extends Component {
             handleChange={this.handleChangeExperience}
             handleSubmit={this.onSubmitExperience}
           />
-          <Education />
+          <Education list={this.state.educationList} />
         </div>
         <div className="overview-area">
           <Overview list={this.state.experienceList} />

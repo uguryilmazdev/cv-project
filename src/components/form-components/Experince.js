@@ -55,16 +55,16 @@ export default class Experience extends Component {
           <input
             onChange={this.props.handleChange}
             type="date"
-            id="dateFrom"
-            name="dateFrom"
+            id="dateFromExp"
+            name="dateFromExp"
             placeholder="from"
             autoComplete="off"
           />
           <input
             onChange={this.props.handleChange}
             type="date"
-            id="dateTo"
-            name="dateTo"
+            id="dateToExp"
+            name="dateToExp"
             placeholder="to"
             autoComplete="off"
           />
