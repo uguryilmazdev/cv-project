@@ -40,6 +40,7 @@ export default class Experience extends Component {
             name="position"
             placeholder="position"
             autoComplete="off"
+            value={this.props.experience.position}
           />
           <input
             onChange={this.props.handleChange}
@@ -48,6 +49,7 @@ export default class Experience extends Component {
             name="company"
             placeholder="company"
             autoComplete="off"
+            value={this.props.experience.company}
           />
           <input
             onChange={this.props.handleChange}
@@ -56,6 +58,7 @@ export default class Experience extends Component {
             name="city"
             placeholder="city"
             autoComplete="off"
+            value={this.props.experience.city}
           />
           <input
             onChange={this.props.handleChange}
@@ -64,6 +67,7 @@ export default class Experience extends Component {
             name="dateFromExp"
             placeholder="from"
             autoComplete="off"
+            value={this.props.experience.dateFromExp}
           />
           <input
             onChange={this.props.handleChange}
@@ -72,6 +76,7 @@ export default class Experience extends Component {
             name="dateToExp"
             placeholder="to"
             autoComplete="off"
+            value={this.props.experience.dateToExp}
           />
           <button type="submit">Add</button>
         </section>

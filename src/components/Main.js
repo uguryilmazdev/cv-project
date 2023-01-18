@@ -79,12 +79,12 @@ export default class Main extends Component {
     this.setState({
       experienceList: this.state.experienceList.concat(this.state.experience),
       experience: {
-        id: this.state.experience.id,
-        position: this.state.experience.position,
-        company: this.state.experience.company,
-        city: this.state.experience.city,
-        dateFromExp: this.state.experience.dateFromExp,
-        dateToExp: this.state.experience.dateToExp,
+        id: '',
+        position: '',
+        company: '',
+        city: '',
+        dateFromExp: '',
+        dateToExp: '',
       },
     });
   };
@@ -94,12 +94,12 @@ export default class Main extends Component {
     this.setState({
       educationList: this.state.educationList.concat(this.state.education),
       education: {
-        id: this.state.education.id,
-        schoolName: this.state.education.schoolName,
-        city: this.state.education.city,
-        degree: this.state.education.degree,
-        dateFromEdu: this.state.education.dateFromEdu,
-        dateToEdu: this.state.education.dateToEdu,
+        id: '',
+        schoolName: '',
+        city: '',
+        degree: '',
+        dateFromEdu: '',
+        dateToEdu: '',
       },
     });
   };
