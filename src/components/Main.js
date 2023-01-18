@@ -43,6 +43,14 @@ export default class Main extends Component {
     });
   };
 
+  handleChangeEducation = (event) => {
+    this.setState({
+      education: {
+        [event.target.name]: event.target.value,
+      },
+    });
+  };
+
   // submit method
   onSubmitExperience = (event) => {
     event.preventDefault();
@@ -72,7 +80,10 @@ export default class Main extends Component {
             handleChange={this.handleChangeExperience}
             handleSubmit={this.onSubmitExperience}
           />
-          <Education list={this.state.educationList} />
+          <Education
+            list={this.state.educationList}
+            handleChange={this.handleChangeEducation}
+          />
         </div>
         <div className="overview-area">
           <Overview list={this.state.experienceList} />
