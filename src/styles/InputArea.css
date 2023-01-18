@@ -3,18 +3,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 1rem auto;
 }
 
-.personel-info-container > * {
+.input-text {
   width: 80%;
   height: 1.5rem;
   margin-top: 0.5rem;
   padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid antiquewhite;
+  background-color: antiquewhite;
 }
 
-/* text-area */
+.input-text:focus {
+  outline: none;
+  border: 2px solid green;
+}
+
+/* ------- text-area ------- */
 .personel-info-container > textarea {
   height: 5rem;
   resize: none;
   overflow-y: auto;
+}
+
+/* ------- add btn ------- */
+.add-btn {
+  margin-top: 0.5rem;
+  height: 1.75rem;
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.add-btn:hover {
+  transform: translateX(3px) translateY(3px);
+}
+
+.add-btn:active {
+  transform: translateX(0px) translateY(0px);
 }

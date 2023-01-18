@@ -30,6 +30,7 @@ export default class Personel extends Component {
         direction="column"
         className="input-section personel-info-container"
       >
+        <h2>Personel Information</h2>
         <input
           onChange={this.props.handleChange}
           type="text"
@@ -38,6 +39,7 @@ export default class Personel extends Component {
           placeholder="first name"
           autoComplete="off"
           value={this.props.personelInfo.firstName}
+          className="input-text"
         />
 
         <input
@@ -47,6 +49,7 @@ export default class Personel extends Component {
           name="lastName"
           placeholder="last name"
           autoComplete="off"
+          className="input-text"
         />
 
         <input
@@ -56,6 +59,7 @@ export default class Personel extends Component {
           name="title"
           placeholder="title"
           autoComplete="off"
+          className="input-text"
         />
 
         <input
@@ -65,6 +69,7 @@ export default class Personel extends Component {
           name="address"
           placeholder="address"
           autoComplete="off"
+          className="input-text"
         />
 
         <input
@@ -74,6 +79,7 @@ export default class Personel extends Component {
           name="phoneNumber"
           placeholder="phone number"
           autoComplete="off"
+          className="input-text"
         />
 
         <input
@@ -83,6 +89,7 @@ export default class Personel extends Component {
           name="email"
           placeholder="e-mail"
           autoComplete="off"
+          className="input-text"
         />
 
         <textarea
@@ -92,6 +99,7 @@ export default class Personel extends Component {
           name="description"
           placeholder="description"
           autoComplete="off"
+          className="input-text"
         />
       </section>
     );

@@ -41,6 +41,7 @@ export default class Education extends Component {
             placeholder="school name"
             autoComplete="off"
             value={this.props.education.schoolName}
+            className="input-text"
           />
           <input
             onChange={this.props.handleChange}
@@ -50,6 +51,7 @@ export default class Education extends Component {
             placeholder="city"
             autoComplete="off"
             value={this.props.education.city}
+            className="input-text"
           />
           <input
             onChange={this.props.handleChange}
@@ -59,6 +61,7 @@ export default class Education extends Component {
             placeholder="degree"
             autoComplete="off"
             value={this.props.education.degree}
+            className="input-text"
           />
           <input
             onChange={this.props.handleChange}
@@ -68,6 +71,7 @@ export default class Education extends Component {
             placeholder="from"
             autoComplete="off"
             value={this.props.education.dateFromEdu}
+            className="input-text"
           />
           <input
             onChange={this.props.handleChange}
@@ -77,8 +81,11 @@ export default class Education extends Component {
             placeholder="to"
             autoComplete="off"
             value={this.props.education.dateToEdu}
+            className="input-text"
           />
-          <button type="submit">Add</button>
+          <button type="submit" className="add-btn">
+            Add
+          </button>
         </section>
       </form>
     );
