@@ -10,6 +10,7 @@ export default class Experience extends Component {
         position: props.experience.position,
         company: props.experience.company,
         city: props.experience.city,
+        descriptionExperience: props.experience.descriptionExperience,
         dateFromExp: props.experience.dateFromExp,
         dateToExp: props.experience.dateToExp,
       },
@@ -61,6 +62,16 @@ export default class Experience extends Component {
             placeholder="city"
             autoComplete="off"
             value={this.props.experience.city}
+            className="input-text"
+          />
+          <input
+            onChange={this.props.handleChange}
+            type="text"
+            id="descriptionExperience"
+            name="descriptionExperience"
+            placeholder="description"
+            autoComplete="off"
+            value={this.props.experience.descriptionExperience}
             className="input-text"
           />
           <input

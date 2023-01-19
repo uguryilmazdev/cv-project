@@ -10,6 +10,7 @@ export default class Education extends Component {
         schoolName: props.education.schoolName,
         city: props.education.city,
         degree: props.education.degree,
+        descriptionEducation: props.education.descriptionEducation,
         dateFromEdu: props.education.dateFromEdu,
         dateToEdu: props.education.dateToEdu,
       },
@@ -61,6 +62,16 @@ export default class Education extends Component {
             placeholder="degree"
             autoComplete="off"
             value={this.props.education.degree}
+            className="input-text"
+          />
+          <input
+            onChange={this.props.handleChange}
+            type="text"
+            id="descriptionEducation"
+            name="descriptionEducation"
+            placeholder="description"
+            autoComplete="off"
+            value={this.props.education.descriptionEducation}
             className="input-text"
           />
           <input
