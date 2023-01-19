@@ -4,7 +4,7 @@ import '../styles/Main.css';
 import Personel from './form-components/Personel';
 import Experience from './form-components/Experince';
 import Education from './form-components/Education';
-import Overview from './Overview';
+import Overview from './overview-components/Overview';
 
 export default class Main extends Component {
   constructor(props) {
