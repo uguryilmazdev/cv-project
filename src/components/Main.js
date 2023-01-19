@@ -130,10 +130,7 @@ export default class Main extends Component {
           />
         </div>
         <div className="overview-area">
-          <Overview
-            list={this.state.experienceList}
-            personelInfo={this.state.personelInfo}
-          />
+          <Overview info={this.state} />
         </div>
       </main>
     );

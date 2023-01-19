@@ -4,12 +4,50 @@
   background-color: yellow;
 
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 2fr 3fr;
 }
 
+/* ------------ Overview Header ------------ */
 .overview-header {
-  background-color: blueviolet;
+  height: 100%;
+  width: 100%;
+}
 
+/* --- personel info first row --- */
+.overview-personel-info {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 5fr 3fr;
+  align-items: center;
+}
+
+.overview-name-title {
+  padding: 1rem;
+}
+
+.overview-name {
+  font-size: 3rem;
+}
+
+.overview-title {
+  font-size: 1.3rem;
+}
+
+.info-container {
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* --- personel info second row --- */
+.personel-info-description {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  max-width: 100%;
+  background-color: aqua;
+}
+
+.description-info {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 1rem;
+  text-align: justify;
 }
