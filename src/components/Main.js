@@ -20,6 +20,11 @@ export default class Main extends Component {
         email: '',
         description: '',
       },
+      website: {
+        id: uniqid(),
+        websiteName: '',
+        websiteURL: '',
+      },
       experience: {
         id: uniqid(),
         position: '',
@@ -39,6 +44,7 @@ export default class Main extends Component {
         dateToEdu: '',
       },
 
+      websiteSocialList: [],
       experienceList: [],
       educationList: [],
     };
@@ -76,6 +82,20 @@ export default class Main extends Component {
   };
 
   // submit method
+  onSubmitWebsite = (event) => {
+    event.preventDefault();
+    this.setState({
+      websiteSocialList: this.state.websiteSocialList.concat(
+        this.state.website
+      ),
+      website: {
+        id: '',
+        websiteName: '',
+        websiteURL: '',
+      },
+    });
+  };
+
   onSubmitExperience = (event) => {
     event.preventDefault();
     this.setState({
