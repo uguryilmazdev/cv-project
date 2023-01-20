@@ -76,7 +76,7 @@ export default class Education extends Component {
           />
           <input
             onChange={this.props.handleChange}
-            type="date"
+            type="text"
             id="dateFromEdu"
             name="dateFromEdu"
             placeholder="from"
@@ -86,7 +86,7 @@ export default class Education extends Component {
           />
           <input
             onChange={this.props.handleChange}
-            type="date"
+            type="text"
             id="dateToEdu"
             name="dateToEdu"
             placeholder="to"

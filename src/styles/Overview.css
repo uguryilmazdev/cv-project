@@ -25,7 +25,15 @@
 }
 
 .overview-name {
-  font-size: 3rem;
+  display: inline;
+  font-size: 2.5rem;
+}
+
+.sub-title {
+  display: inline;
+  font-size: 1.4rem;
+  padding: 1rem 1rem 0rem 1rem;
+  border-top: 1px solid grey;
 }
 
 .overview-title {
@@ -57,14 +65,12 @@
 }
 
 /* ------------ experience section ------------*/
-.experience-container {
+.exp-edu-container {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
 }
 
-.exp-child {
+.exp-edu-child {
   display: grid;
   grid-template-columns: 1fr 2fr;
   font-size: 0.8rem;
@@ -72,7 +78,7 @@
 }
 
 /* left child */
-.exp-child-left {
+.exp-edu-child-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,22 +86,24 @@
   border-right: 3px solid grey;
 }
 
-.exp-company {
+.exp-company,
+.edu-schoolname {
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 /* right child */
-.exp-child-right {
+.exp-edu-child-right {
   padding-left: 0.5rem;
 }
 
-.exp-title {
+.exp-title,
+.edu-degree {
   font-weight: 600;
   text-transform: capitalize;
 }
 
-.exp-description {
+.exp-edu-description {
   text-align: justify;
 }
