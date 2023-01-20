@@ -44,3 +44,22 @@
 .add-btn:active {
   transform: translateX(0px) translateY(0px);
 }
+
+/* ------ website and social links ------*/
+.website-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.website-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.website-container > input {
+  width: 45%;
+}

@@ -100,13 +100,39 @@ export default class Personel extends Component {
         <textarea
           onChange={this.props.handleChange}
           type="text"
-          id="description"
-          name="description"
+          id="descriptionPersonelInfo"
+          name="descriptionPersonelInfo"
           placeholder="description"
           autoComplete="off"
           className="input-text text-area"
           value={this.props.personelInfo.description}
         />
+
+        <form className="website-form">
+          <h2>Website and Social Links</h2>
+          <div className="website-container">
+            <input
+              type="text"
+              id="websiteText"
+              name="websiteText"
+              placeholder="Linkedin"
+              autoComplete="off"
+              className="input-text"
+            />
+            <input
+              type="url"
+              id="websiteUrl"
+              name="websiteUrl"
+              placeholder="linkedin.com/example"
+              autoComplete="off"
+              className="input-text"
+            />
+          </div>
+
+          <button type="submit" className="add-btn">
+            Add
+          </button>
+        </form>
       </section>
     );
   }
