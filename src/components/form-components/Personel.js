@@ -12,13 +12,22 @@ export default class Personel extends Component {
         address: props.personelInfo.address,
         phoneNumber: props.personelInfo.phoneNumber,
         email: props.personelInfo.email,
-        description: props.personelInfo.description,
+        descriptionPersonelInfo: props.personelInfo.descriptionPersonelInfo,
+      },
+      websiteInfo: {
+        id: props.websiteInfo.id,
+        websiteName: props.websiteInfo.websiteName,
+        websiteURL: props.websiteInfo.websiteURL,
       },
     };
   }
 
   componentDidUpdate(props) {
     if (props.personelInfo !== this.props.personelInfo) {
+      this.setState(props);
+    }
+
+    if (props.websiteInfo !== this.props.websiteInfo) {
       this.setState(props);
     }
   }
@@ -32,7 +41,7 @@ export default class Personel extends Component {
       >
         <h2>Personel Information</h2>
         <input
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="text"
           id="firstName"
           name="firstName"
@@ -43,7 +52,7 @@ export default class Personel extends Component {
         />
 
         <input
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="text"
           id="lastName"
           name="lastName"
@@ -54,7 +63,7 @@ export default class Personel extends Component {
         />
 
         <input
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="text"
           id="title"
           name="title"
@@ -65,7 +74,7 @@ export default class Personel extends Component {
         />
 
         <input
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="text"
           id="address"
           name="address"
@@ -76,7 +85,7 @@ export default class Personel extends Component {
         />
 
         <input
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="text"
           id="phoneNumber"
           name="phoneNumber"
@@ -87,7 +96,7 @@ export default class Personel extends Component {
         />
 
         <input
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="email"
           id="email"
           name="email"
@@ -98,37 +107,40 @@ export default class Personel extends Component {
         />
 
         <textarea
-          onChange={this.props.handleChange}
+          onChange={this.props.handleChangePersonelInfo}
           type="text"
           id="descriptionPersonelInfo"
           name="descriptionPersonelInfo"
           placeholder="description"
           autoComplete="off"
           className="input-text text-area"
-          value={this.props.personelInfo.description}
+          value={this.props.personelInfo.descriptionPersonelInfo}
         />
 
-        <form className="website-form">
+        <form onSubmit={this.props.handleSubmit} className="website-form">
           <h2>Website and Social Links</h2>
-          <div className="website-container">
+          <div className="website-input-container">
             <input
+              onChange={this.props.handleChangeWebsite}
               type="text"
-              id="websiteText"
-              name="websiteText"
+              id="websiteName"
+              name="websiteName"
               placeholder="Linkedin"
               autoComplete="off"
               className="input-text"
+              value={this.props.websiteInfo.websiteName}
             />
             <input
-              type="url"
-              id="websiteUrl"
-              name="websiteUrl"
+              onChange={this.props.handleChangeWebsite}
+              type="text"
+              id="websiteURL"
+              name="websiteURL"
               placeholder="linkedin.com/example"
               autoComplete="off"
               className="input-text"
+              value={this.props.websiteInfo.websiteURL}
             />
           </div>
-
           <button type="submit" className="add-btn">
             Add
           </button>

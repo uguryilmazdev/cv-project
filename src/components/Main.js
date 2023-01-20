@@ -18,9 +18,9 @@ export default class Main extends Component {
         address: '',
         phoneNumber: '',
         email: '',
-        description: '',
+        descriptionPersonelInfo: '',
       },
-      website: {
+      websiteInfo: {
         id: uniqid(),
         websiteName: '',
         websiteURL: '',
@@ -61,6 +61,16 @@ export default class Main extends Component {
     }));
   };
 
+  handleChangeWebsite = (event) => {
+    const { name, value } = event.target;
+    this.setState((prevState) => ({
+      websiteInfo: {
+        ...prevState.websiteInfo,
+        [name]: value,
+      },
+    }));
+  };
+
   handleChangeExperience = (event) => {
     const { name, value } = event.target;
     this.setState((prevState) => ({
@@ -86,9 +96,9 @@ export default class Main extends Component {
     event.preventDefault();
     this.setState({
       websiteSocialList: this.state.websiteSocialList.concat(
-        this.state.website
+        this.state.websiteInfo
       ),
-      website: {
+      websiteInfo: {
         id: '',
         websiteName: '',
         websiteURL: '',
@@ -134,7 +144,10 @@ export default class Main extends Component {
         <div className="input-area">
           <Personel
             personelInfo={this.state.personelInfo}
-            handleChange={this.handleChangePersonelInfo}
+            websiteInfo={this.state.websiteInfo}
+            handleChangePersonelInfo={this.handleChangePersonelInfo}
+            handleChangeWebsite={this.handleChangeWebsite}
+            handleSubmit={this.onSubmitWebsite}
           />
           <Experience
             experience={this.state.experience}

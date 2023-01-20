@@ -46,6 +46,7 @@
 }
 
 /* --- personel info second row --- */
+/* description */
 .personel-info-description {
   display: grid;
   grid-template-columns: 5fr 3fr;
@@ -58,6 +59,24 @@
   padding: 1rem;
   text-align: justify;
 }
+
+/* website and socials */
+.website-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.website-child {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.website-name {
+  font-weight: 500;
+}
+
 /* ------------ Overview Main ------------- */
 .overview-main {
   display: flex;

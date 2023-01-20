@@ -23,9 +23,16 @@ export default class Overview extends Component {
         </div>
         <div className="personel-info-description">
           <div className="description-info">
-            {this.props.info.personelInfo.description}
+            {this.props.info.personelInfo.descriptionPersonelInfo}
           </div>
-          <div className="website-container">website</div>
+          <div className="website-container">
+            {this.props.info.websiteSocialList.map((site) => (
+              <div className="website-child" key={site.id}>
+                <div className="website-name">{site.websiteName}</div>
+                <div className="website-url">{site.websiteURL}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

@@ -53,13 +53,13 @@
   width: 80%;
 }
 
-.website-container {
+.website-input-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
 
-.website-container > input {
+.website-input-container > input {
   width: 45%;
 }
