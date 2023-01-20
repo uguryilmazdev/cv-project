@@ -22,7 +22,7 @@
 }
 
 /* ------- text-area ------- */
-.personel-info-container > textarea {
+.text-area {
   height: 5rem;
   resize: none;
   overflow-y: auto;

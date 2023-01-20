@@ -104,7 +104,7 @@ export default class Personel extends Component {
           name="description"
           placeholder="description"
           autoComplete="off"
-          className="input-text"
+          className="input-text text-area"
           value={this.props.personelInfo.description}
         />
       </section>

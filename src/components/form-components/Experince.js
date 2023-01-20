@@ -64,7 +64,7 @@ export default class Experience extends Component {
             value={this.props.experience.city}
             className="input-text"
           />
-          <input
+          <textarea
             onChange={this.props.handleChange}
             type="text"
             id="descriptionExperience"
@@ -72,7 +72,7 @@ export default class Experience extends Component {
             placeholder="description"
             autoComplete="off"
             value={this.props.experience.descriptionExperience}
-            className="input-text"
+            className="input-text text-area"
           />
           <input
             onChange={this.props.handleChange}

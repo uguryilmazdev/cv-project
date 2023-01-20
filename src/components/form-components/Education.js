@@ -64,7 +64,7 @@ export default class Education extends Component {
             value={this.props.education.degree}
             className="input-text"
           />
-          <input
+          <textarea
             onChange={this.props.handleChange}
             type="text"
             id="descriptionEducation"
@@ -72,7 +72,7 @@ export default class Education extends Component {
             placeholder="description"
             autoComplete="off"
             value={this.props.education.descriptionEducation}
-            className="input-text"
+            className="input-text text-area"
           />
           <input
             onChange={this.props.handleChange}
