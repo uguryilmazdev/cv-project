@@ -32,7 +32,27 @@ export default class Overview extends Component {
   };
 
   experienceContainer = () => {
-    return <div className="experience-container">experience</div>;
+    return (
+      <div className="experience-container">
+        {this.props.info.experienceList.map((exp) => (
+          <div className="exp-child" key={exp.id}>
+            <div className="exp-child-left">
+              <div className="exp-company">{exp.company}</div>
+              <div className="exp-city">{exp.city}</div>
+              <div className="exp-date">
+                {exp.dateFromExp}
+                {' - '}
+                {exp.dateToExp}
+              </div>
+            </div>
+            <div className="exp-child-right">
+              <div className="exp-title">{exp.position}</div>
+              <div className="exp-description">{exp.descriptionExperience}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   };
 
   educationContainer = () => {

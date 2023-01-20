@@ -76,7 +76,7 @@ export default class Experience extends Component {
           />
           <input
             onChange={this.props.handleChange}
-            type="date"
+            type="text"
             id="dateFromExp"
             name="dateFromExp"
             placeholder="from"
@@ -86,7 +86,7 @@ export default class Experience extends Component {
           />
           <input
             onChange={this.props.handleChange}
-            type="date"
+            type="text"
             id="dateToExp"
             name="dateToExp"
             placeholder="to"

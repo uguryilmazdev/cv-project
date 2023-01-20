@@ -1,10 +1,10 @@
 .overview-container {
   width: 80%;
-  height: 90vh;
-  background-color: yellow;
-
+  min-height: 90vh;
   display: grid;
   grid-template-rows: 2fr 3fr;
+  border: 1px solid grey;
+  margin: 2rem;
 }
 
 /* ------------ Overview Header ------------ */
@@ -42,12 +42,60 @@
   display: grid;
   grid-template-columns: 5fr 3fr;
   max-width: 100%;
-  background-color: aqua;
 }
 
 .description-info {
   font-size: 0.8rem;
   font-style: italic;
   padding: 1rem;
+  text-align: justify;
+}
+/* ------------ Overview Main ------------- */
+.overview-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------ experience section ------------*/
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.exp-child {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+/* left child */
+.exp-child-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-right: 3px solid grey;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* right child */
+.exp-child-right {
+  padding-left: 0.5rem;
+}
+
+.exp-title {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.exp-description {
   text-align: justify;
 }
