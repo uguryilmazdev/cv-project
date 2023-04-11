@@ -1,5 +1,13 @@
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: yellowgreen;
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+@media (width <= 1024px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }

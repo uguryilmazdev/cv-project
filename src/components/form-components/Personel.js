@@ -39,7 +39,7 @@ export default class Personel extends Component {
         direction="column"
         className="input-section personel-info-container"
       >
-        <h2>Personel Information</h2>
+        <h2 className="title-input-area">Personel Information</h2>
         <input
           onChange={this.props.handleChangePersonelInfo}
           type="text"
@@ -116,9 +116,9 @@ export default class Personel extends Component {
           className="input-text text-area"
           value={this.props.personelInfo.descriptionPersonelInfo}
         />
-
+        <hr className="divider" />
         <form onSubmit={this.props.handleSubmit} className="website-form">
-          <h2>Website and Social Links</h2>
+          <h2 className="title-input-area">Website and Social Links</h2>
           <div className="website-input-container">
             <input
               onChange={this.props.handleChangeWebsite}

@@ -1,10 +1,10 @@
+.overview-area {
+  padding: 2rem 3rem;
+}
+
 .overview-container {
-  width: 80%;
-  min-height: 90vh;
-  display: grid;
-  grid-template-rows: 2fr 3fr;
-  border: 1px solid grey;
-  margin: 2rem;
+  border: 1px solid var(--dark-blue);
+  padding: 0.75rem;
 }
 
 /* ------------ Overview Header ------------ */
@@ -33,7 +33,7 @@
   display: inline;
   font-size: 1.4rem;
   padding: 1rem 1rem 0rem 1rem;
-  border-top: 1px solid grey;
+  border-top: 1px solid var(--dark-blue);
 }
 
 .overview-title {

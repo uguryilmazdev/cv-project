@@ -1,6 +1,41 @@
-body {
+:root {
+  --dark-blue: #112d4e;
+  --blue: #3f72af;
+  --dark-purple: #424874;
+  --purple: #a6b1e1;
+  --light-purple: #dcd6f7;
+  --light-grey: #dbe2ef;
+  --white: #f9f7f7;
+  --cream: #f4eeff;
+  --task-bg: #cbd9e9;
+  --yellow: #f9ed69;
+  --orange: #f08a5d;
+  --red: #b83b5e;
+  --green: #95e1d3;
+
+  /* font size */
+  font-size: 1vmax;
+}
+
+@media (width <= 1024px) {
+  :root {
+    font-size: 1.3vmax;
+  }
+}
+
+@media (width <= 768px) {
+  :root {
+    font-size: 1.6vmax;
+  }
+}
+
+*,
+hmtl {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

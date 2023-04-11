@@ -33,7 +33,8 @@ export default class Experience extends Component {
           direction="column"
           className="input-section experience-container"
         >
-          <h2>Experience</h2>
+          <hr className="divider" />
+          <h2 className="title-input-area">Experience</h2>
           <input
             onChange={this.props.handleChange}
             type="text"

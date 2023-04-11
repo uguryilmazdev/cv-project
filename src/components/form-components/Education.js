@@ -33,7 +33,8 @@ export default class Education extends Component {
           direction="column"
           className="input-section education-container"
         >
-          <h2>Education</h2>
+          <hr className="divider" />
+          <h2 className="title-input-area">Education</h2>
           <input
             onChange={this.props.handleChange}
             type="text"
