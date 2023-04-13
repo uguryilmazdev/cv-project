@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../styles/Overview.css';
+import html2pdf from 'html2pdf.js';
 
 export default class Overview extends Component {
   personelInfoContainer = () => {
@@ -40,7 +41,8 @@ export default class Overview extends Component {
 
   experienceContainer = () => {
     return (
-      <div className="exp-edu-container">
+      <>
+        {' '}
         {this.props.info.experienceList.map((exp) => (
           <div className="exp-edu-child" key={exp.id}>
             <div className="exp-edu-child-left">
@@ -60,13 +62,14 @@ export default class Overview extends Component {
             </div>
           </div>
         ))}
-      </div>
+      </>
     );
   };
 
   educationContainer = () => {
     return (
-      <div className="exp-edu-container">
+      <>
+        {' '}
         {this.props.info.educationList.map((edu) => (
           <div className="exp-edu-child" key={edu.id}>
             <div className="exp-edu-child-left">
@@ -86,21 +89,41 @@ export default class Overview extends Component {
             </div>
           </div>
         ))}
-      </div>
+      </>
     );
   };
 
+  printDocument() {
+    const container = document.querySelector('.overview-container');
+    const opt = {
+      margin: 10,
+      filename: 'CV.pdf',
+      html2canvas: { scale: 2 },
+      pagebreak: { mode: ['avoid-all', 'css'] },
+    };
+    html2pdf().set(opt).from(container).save();
+  }
+
   render() {
     return (
-      <div className="overview-container">
-        <this.personelInfoContainer />
-        <div className="overview-main">
-          <h2 className="sub-title">WORK EXPERIENCE</h2>
-          <this.experienceContainer />
-          <h2 className="sub-title">EDUCATION</h2>
-          <this.educationContainer />
+      <>
+        <div className="border-container">
+          <div className="overview-container">
+            <this.personelInfoContainer />
+            <div className="overview-main">
+              <h2 className="sub-title">WORK EXPERIENCE</h2>
+              <this.experienceContainer />
+              <h2 className="sub-title">EDUCATION</h2>
+              <this.educationContainer />
+            </div>
+          </div>
         </div>
-      </div>
+        <div className="pdf-btn-container">
+          <button className="pdf-btn add-btn" onClick={this.printDocument}>
+            PDF
+          </button>
+        </div>
+      </>
     );
   }
 }

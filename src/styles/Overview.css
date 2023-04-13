@@ -2,11 +2,10 @@
   padding: 2rem 3rem;
 }
 
-.overview-container {
+.border-container {
   border: 1px solid var(--dark-blue);
-  padding: 0.75rem;
+  padding: 2rem;
 }
-
 /* ------------ Overview Header ------------ */
 .overview-header {
   height: 100%;
@@ -43,6 +42,10 @@
 .info-container {
   padding: 1rem;
   font-style: italic;
+}
+
+.info-container > * {
+  margin-bottom: 0.75rem;
 }
 
 /* --- personel info second row --- */
@@ -84,11 +87,6 @@
 }
 
 /* ------------ experience section ------------*/
-.exp-edu-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .exp-edu-child {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -125,4 +123,10 @@
 
 .exp-edu-description {
   text-align: justify;
+}
+
+.pdf-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
