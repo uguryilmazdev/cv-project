@@ -99,7 +99,7 @@ export default class Main extends Component {
         this.state.websiteInfo
       ),
       websiteInfo: {
-        id: '',
+        id: uniqid(),
         websiteName: '',
         websiteURL: '',
       },
@@ -111,7 +111,7 @@ export default class Main extends Component {
     this.setState({
       experienceList: this.state.experienceList.concat(this.state.experience),
       experience: {
-        id: '',
+        id: uniqid(),
         position: '',
         company: '',
         city: '',
@@ -127,7 +127,7 @@ export default class Main extends Component {
     this.setState({
       educationList: this.state.educationList.concat(this.state.education),
       education: {
-        id: '',
+        id: uniqid(),
         schoolName: '',
         city: '',
         degree: '',
