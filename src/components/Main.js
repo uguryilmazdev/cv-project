@@ -91,6 +91,37 @@ export default class Main extends Component {
     }));
   };
 
+  // handleDelete methods
+  handleDeleteWebsite = (id) => {
+    const updatedWebsiteSocialList = this.state.websiteSocialList.filter(
+      (site) => site.id !== id
+    );
+
+    this.setState({
+      websiteSocialList: updatedWebsiteSocialList,
+    });
+  };
+
+  handleDeleteExperience = (id) => {
+    const updatedExperienceList = this.state.experienceList.filter(
+      (exp) => exp.id !== id
+    );
+
+    this.setState({
+      experienceList: updatedExperienceList,
+    });
+  };
+
+  handleDeleteEducation = (id) => {
+    const updatedEducationList = this.state.educationList.filter(
+      (edu) => edu.id !== id
+    );
+
+    this.setState({
+      educationList: updatedEducationList,
+    });
+  };
+
   // submit method
   onSubmitWebsite = (event) => {
     event.preventDefault();
@@ -163,7 +194,12 @@ export default class Main extends Component {
           />
         </div>
         <div className="overview-area">
-          <Overview info={this.state} />
+          <Overview
+            info={this.state}
+            handleDeleteWebsite={this.handleDeleteWebsite}
+            handleDeleteExperience={this.handleDeleteExperience}
+            handleDeleteEducation={this.handleDeleteEducation}
+          />
         </div>
       </main>
     );

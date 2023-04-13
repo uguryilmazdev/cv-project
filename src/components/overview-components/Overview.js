@@ -4,6 +4,7 @@ import html2pdf from 'html2pdf.js';
 import { ReactComponent as PhoneNumberSVG } from '../../images/phoneNumber.svg';
 import { ReactComponent as AddressSVG } from '../../images/address.svg';
 import { ReactComponent as EmailSVG } from '../../images/email.svg';
+import { ReactComponent as DeleteSVG } from '../../images/delete.svg';
 
 export default class Overview extends Component {
   personelInfoContainer = () => {
@@ -47,6 +48,16 @@ export default class Overview extends Component {
           <div className="website-container">
             {this.props.info.websiteSocialList.map((site) => (
               <div className="website-child" key={site.id}>
+                <div className="delete-btn-container">
+                  <button
+                    type="button"
+                    className="delete-btn"
+                    onClick={() => this.props.handleDeleteWebsite(site.id)}
+                  >
+                    <DeleteSVG />
+                  </button>
+                </div>
+
                 <div className="website-name">{site.websiteName}</div>
                 <div className="website-url">{site.websiteURL}</div>
               </div>
@@ -62,20 +73,31 @@ export default class Overview extends Component {
       <>
         {' '}
         {this.props.info.experienceList.map((exp) => (
-          <div className="exp-edu-child" key={exp.id}>
-            <div className="exp-edu-child-left">
-              <div className="exp-company">{exp.company}</div>
-              <div className="exp-edu-city">{exp.city}</div>
-              <div className="exp-date">
-                {exp.dateFromExp}
-                {' - '}
-                {exp.dateToExp}
-              </div>
+          <div className="exp-edu-container" key={exp.id}>
+            <div className="delete-btn-container">
+              <button
+                type="button"
+                className="delete-btn"
+                onClick={() => this.props.handleDeleteExperience(exp.id)}
+              >
+                <DeleteSVG />
+              </button>
             </div>
-            <div className="exp-edu-child-right">
-              <div className="exp-title">{exp.position}</div>
-              <div className="exp-edu-description">
-                {exp.descriptionExperience}
+            <div className="exp-edu-child">
+              <div className="exp-edu-child-left">
+                <div className="exp-company">{exp.company}</div>
+                <div className="exp-edu-city">{exp.city}</div>
+                <div className="exp-date">
+                  {exp.dateFromExp}
+                  {' - '}
+                  {exp.dateToExp}
+                </div>
+              </div>
+              <div className="exp-edu-child-right">
+                <div className="exp-title">{exp.position}</div>
+                <div className="exp-edu-description">
+                  {exp.descriptionExperience}
+                </div>
               </div>
             </div>
           </div>
@@ -89,20 +111,31 @@ export default class Overview extends Component {
       <>
         {' '}
         {this.props.info.educationList.map((edu) => (
-          <div className="exp-edu-child" key={edu.id}>
-            <div className="exp-edu-child-left">
-              <div className="edu-schoolname">{edu.schoolName}</div>
-              <div className="exp-edu-city">{edu.city}</div>
-              <div className="edu-date">
-                {edu.dateFromEdu}
-                {' - '}
-                {edu.dateToEdu}
-              </div>
+          <div className="exp-edu-container" key={edu.id}>
+            <div className="delete-btn-container">
+              <button
+                type="button"
+                className="delete-btn"
+                onClick={() => this.props.handleDeleteEducation(edu.id)}
+              >
+                <DeleteSVG />
+              </button>
             </div>
-            <div className="exp-edu-child-right">
-              <div className="edu-degree">{edu.degree}</div>
-              <div className="exp-edu-description">
-                {edu.descriptionEducation}
+            <div className="exp-edu-child">
+              <div className="exp-edu-child-left">
+                <div className="edu-schoolname">{edu.schoolName}</div>
+                <div className="exp-edu-city">{edu.city}</div>
+                <div className="edu-date">
+                  {edu.dateFromEdu}
+                  {' - '}
+                  {edu.dateToEdu}
+                </div>
+              </div>
+              <div className="exp-edu-child-right">
+                <div className="edu-degree">{edu.degree}</div>
+                <div className="exp-edu-description">
+                  {edu.descriptionEducation}
+                </div>
               </div>
             </div>
           </div>
@@ -110,6 +143,8 @@ export default class Overview extends Component {
       </>
     );
   };
+
+  deleteSection = () => {};
 
   printDocument() {
     const container = document.querySelector('.overview-container');

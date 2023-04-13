@@ -101,6 +101,11 @@
 }
 
 /* ------------ experience section ------------*/
+.exp-edu-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .exp-edu-child {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -142,5 +147,29 @@
 .pdf-btn-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+/* delete button style */
+.delete-btn-container {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.delete-btn {
+  border: none;
+  background-color: var(--white);
+}
+
+.website-child:hover > .delete-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.exp-edu-container:hover > .delete-btn-container {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
