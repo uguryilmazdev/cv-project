@@ -128,6 +128,7 @@ export default class Personel extends Component {
               placeholder="Linkedin"
               autoComplete="off"
               className="input-text"
+              required
               value={this.props.websiteInfo.websiteName}
             />
             <input
@@ -138,6 +139,7 @@ export default class Personel extends Component {
               placeholder="linkedin.com/example"
               autoComplete="off"
               className="input-text"
+              required
               value={this.props.websiteInfo.websiteURL}
             />
           </div>

@@ -42,6 +42,7 @@ export default class Education extends Component {
             name="schoolName"
             placeholder="school name"
             autoComplete="off"
+            required
             value={this.props.education.schoolName}
             className="input-text"
           />
@@ -52,6 +53,7 @@ export default class Education extends Component {
             name="city"
             placeholder="city"
             autoComplete="off"
+            required
             value={this.props.education.city}
             className="input-text"
           />
@@ -62,6 +64,7 @@ export default class Education extends Component {
             name="degree"
             placeholder="degree"
             autoComplete="off"
+            required
             value={this.props.education.degree}
             className="input-text"
           />
@@ -72,6 +75,7 @@ export default class Education extends Component {
             name="descriptionEducation"
             placeholder="description"
             autoComplete="off"
+            required
             value={this.props.education.descriptionEducation}
             className="input-text text-area"
           />
@@ -82,6 +86,7 @@ export default class Education extends Component {
             name="dateFromEdu"
             placeholder="from"
             autoComplete="off"
+            required
             value={this.props.education.dateFromEdu}
             className="input-text"
           />
@@ -92,6 +97,7 @@ export default class Education extends Component {
             name="dateToEdu"
             placeholder="to"
             autoComplete="off"
+            required
             value={this.props.education.dateToEdu}
             className="input-text"
           />

@@ -42,6 +42,7 @@ export default class Experience extends Component {
             name="position"
             placeholder="position"
             autoComplete="off"
+            required
             value={this.props.experience.position}
             className="input-text"
           />
@@ -52,6 +53,7 @@ export default class Experience extends Component {
             name="company"
             placeholder="company"
             autoComplete="off"
+            required
             value={this.props.experience.company}
             className="input-text"
           />
@@ -62,6 +64,7 @@ export default class Experience extends Component {
             name="city"
             placeholder="city"
             autoComplete="off"
+            required
             value={this.props.experience.city}
             className="input-text"
           />
@@ -72,6 +75,7 @@ export default class Experience extends Component {
             name="descriptionExperience"
             placeholder="description"
             autoComplete="off"
+            required
             value={this.props.experience.descriptionExperience}
             className="input-text text-area"
           />
@@ -82,6 +86,7 @@ export default class Experience extends Component {
             name="dateFromExp"
             placeholder="from"
             autoComplete="off"
+            required
             value={this.props.experience.dateFromExp}
             className="input-text"
           />
@@ -92,6 +97,7 @@ export default class Experience extends Component {
             name="dateToExp"
             placeholder="to"
             autoComplete="off"
+            required
             value={this.props.experience.dateToExp}
             className="input-text"
           />
