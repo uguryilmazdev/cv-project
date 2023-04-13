@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../../styles/Overview.css';
 import html2pdf from 'html2pdf.js';
+import { ReactComponent as PhoneNumberSVG } from '../../images/phoneNumber.svg';
+import { ReactComponent as AddressSVG } from '../../images/address.svg';
+import { ReactComponent as EmailSVG } from '../../images/email.svg';
 
 export default class Overview extends Component {
   personelInfoContainer = () => {
@@ -17,9 +20,24 @@ export default class Overview extends Component {
             </div>
           </div>
           <div className="info-container">
-            <div>{this.props.info.personelInfo.address}</div>
-            <div>{this.props.info.personelInfo.phoneNumber}</div>
-            <div>{this.props.info.personelInfo.email}</div>
+            <div className="info-container-child">
+              <div className="info-container-icon">
+                <AddressSVG />
+              </div>
+              <div>{this.props.info.personelInfo.address}</div>
+            </div>
+            <div className="info-container-child">
+              <div className="info-container-icon">
+                <PhoneNumberSVG />
+              </div>
+              <div>{this.props.info.personelInfo.phoneNumber}</div>
+            </div>
+            <div className="info-container-child">
+              <div className="info-container-icon">
+                <EmailSVG />
+              </div>
+              <div>{this.props.info.personelInfo.email}</div>
+            </div>
           </div>
         </div>
         <div className="personel-info-description">

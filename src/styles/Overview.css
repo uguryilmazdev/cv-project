@@ -44,6 +44,20 @@
   font-style: italic;
 }
 
+.info-container-child {
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.info-container-child > * {
+  padding: 0.25rem;
+}
+
+.info-container-icon {
+  padding-top: 0.6rem;
+}
+
 .info-container > * {
   margin-bottom: 0.75rem;
 }
