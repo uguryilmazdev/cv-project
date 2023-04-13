@@ -49,5 +49,8 @@
   "typeRoots": [
     "./typings",
     "./node_modules/@types/"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
