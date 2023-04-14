@@ -163,12 +163,10 @@ export default class Overview extends Component {
         <div className="border-container">
           <div className="overview-container">
             <this.personelInfoContainer />
-            <div className="overview-main">
-              <h2 className="sub-title">WORK EXPERIENCE</h2>
-              <this.experienceContainer />
-              <h2 className="sub-title">EDUCATION</h2>
-              <this.educationContainer />
-            </div>
+            <h2 className="sub-title">WORK EXPERIENCE</h2>
+            <this.experienceContainer />
+            <h2 className="sub-title">EDUCATION</h2>
+            <this.educationContainer />
           </div>
         </div>
         <div className="pdf-btn-container">

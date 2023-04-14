@@ -6,6 +6,11 @@
   border: 1px solid var(--dark-blue);
   padding: 2rem;
 }
+
+.overview-container {
+  display: flex;
+  flex-direction: column;
+}
 /* ------------ Overview Header ------------ */
 .overview-header {
   height: 100%;
