@@ -25,7 +25,7 @@ export default class Header extends Component {
   githubLink() {
     return (
       <a
-        href="https://github.com/askalamentor"
+        href="https://github.com/uguryilmazdev"
         target="_blank"
         rel="noreferrer"
       >

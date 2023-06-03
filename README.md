@@ -15,7 +15,7 @@ CV Maker is a simple resume building application
 
 ### TRY DEMO
 
-<a href='https://askalamentor.github.io/cv-project/' target="_blank">Live demo</a>
+<a href='https://uguryilmazdev.github.io/cv-project/' target="_blank">Live demo</a>
 
 ### SCREENSHOTS
 
